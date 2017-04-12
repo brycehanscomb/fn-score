@@ -17,8 +17,8 @@ const BASIC_NOTES = {
 
 const basicNoteKeys = Object.keys(BASIC_NOTES);
 
-const lowestOctave = 0;
-const highestOctave = 7;
+const lowestOctave = 3;
+const highestOctave = 6;
 
 /**
  * @type {Array.<Tone>}
