@@ -31,20 +31,14 @@ import Score from './components/score';
 
 global.TONES = TONES;
 
-global.EXAMPLE_SOUNDS = shuffle(TONES).slice(0, 12)
-    .map(durationFactories.createDurationOfRandomLength)
-    .map(soundFactories.createWithRandomTone)
-;
-
-const sampleScore = buildScoreJson(
-    global.EXAMPLE_SOUNDS
-        .filter(s => {
-            return (
-                pitchAssertions.isOctave(4, s.tone) ||
-                pitchAssertions.isOctave(5, s.tone)
-            );
-        })
-);
+// global.EXAMPLE_SOUNDS = global.TONES
+//     .map(t => durationFactories.createDurationOfRandomLength())
+//     .map(soundFactories.buildFromTonesList(TONES.slice().reverse()))
+// ;
+//
+// const sampleScore = buildScoreJson(
+//     global.EXAMPLE_SOUNDS
+// );
 
 class App extends Component {
     render() {
