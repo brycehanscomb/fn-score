@@ -1,0 +1,22 @@
+{
+  "name": "fnscore",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "musicjson3": "^0.1.9",
+    "opensheetmusicdisplay": "^0.2.1",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3",
+    "satie": "0.0.13-alpha6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.note {
+  font-family: Helvetica;
+  font-size: 30px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.note:before {
+  display: block;
+  font-family: 'Rhythms';
+}
+
+.note[data-length="WHOLE"]:before { content: 'w'; }
+.note[data-length="HALF"]:before { content: 'h'; }
+.note[data-length="QUARTER"]:before { content: 'q'; }
+.note[data-length="EIGHTH"]:before { content: 'e'; }
+.note[data-length="SIXTEENTH"]:before { content: 's'; }
+.note[data-length="THIRTY_SECOND"]:before { content: 'z'; }
+
+.note[data-note="·"][data-length="WHOLE"]:before { content: 'W'; }
+.note[data-note="·"][data-length="HALF"]:before { content: 'H'; }
+.note[data-note="·"][data-length="QUARTER"]:before { content: 'Q'; }
+.note[data-note="·"][data-length="EIGHTH"]:before { content: 'E'; }
+.note[data-note="·"][data-length="SIXTEENTH"]:before { content: 'S'; }
+.note[data-note="·"][data-length="THIRTY_SECOND"]:before { content: 'Z'; }
