@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "gh-pages": "^0.12.0",
     "react-scripts": "0.9.5"
   },
   "dependencies": {
@@ -11,12 +12,16 @@
     "opensheetmusicdisplay": "^0.2.1",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
+    "react-markdown-to-html": "^1.0.11",
     "satie": "0.0.13-alpha6"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "homepage": "http://brycehanscomb.github.io/fn-score"
 }

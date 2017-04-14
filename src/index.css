@@ -1,7 +1,11 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 1em;
   font-family: sans-serif;
+}
+
+:root {
+  font-size: 18px;
 }
 
 * {

@@ -2,6 +2,9 @@
 
 import React, {Component} from 'react';
 import './App.css';
+var Markdown2HTML = require('react-markdown-to-html');
+
+import README from '../README.md';
 
 
 import partial from 'lodash/partial';
@@ -24,12 +27,12 @@ import * as soundFactories from './factories/sound';
 import * as durationFactories from './factories/duration';
 
 import DURATIONS from './constants/durations';
-
-import TONES from './constants/tones';
-
-import Score from './components/score';
-
-global.TONES = TONES;
+//
+// import TONES from './constants/tones';
+//
+// import Score from './components/score';
+//
+// global.TONES = TONES;
 
 // global.EXAMPLE_SOUNDS = global.TONES
 //     .map(t => durationFactories.createDurationOfRandomLength())
@@ -44,9 +47,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Score
-                    musicJSON={sampleScore}
-                />
+                <Markdown2HTML src={README} />
             </div>
         );
     }

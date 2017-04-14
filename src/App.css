@@ -1,24 +1,85 @@
 .App {
-  text-align: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+* { box-sizing: border-box }
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem;
+  background: #f2f2f2;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+figure img {
+  max-width: 100%;
 }
 
-.App-intro {
-  font-size: large;
+figcaption {
+  margin-top: 1rem;
+  font-style: italic;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+code {
+  background-color: #f2f2f2;
+  display: inline-block;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 1.1rem;
+}
+
+bigcode {
+  display: block;
+  font-size: 1.5rem;
+  font-family: monospace;
+  padding: 0.5em;
+  background: #f2f2f2;
+  border-left: 10px solid #cdcdcd;
+  white-space: pre;
+}
+
+code,
+bigcode {
+  overflow-x:auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+pre code {
+  font-size: 1rem;
+  padding: 1rem;
+  display: block;
+  border-left: 10px solid #cdcdcd;
+}
+
+p code {
+  vertical-align: middle;
+  white-space: normal;
+  word-break: break-word;
+}
+
+note,
+note-list {
+  display: inline;
+  font-family: 'Rhythms', monospace;
+  font-size: 1.5em;
+  line-height: inherit;
+  vertical-align: middle;
+}
+
+note-list {
+  display: inline-block;
+}
+
+note-list:before {
+  font-family: monospace;
+  font-size: 1.1rem;
+  content: '[';
+}
+
+note-list:after {
+  font-family: monospace;
+  font-size: 1.1rem;
+  content: ']';
 }
