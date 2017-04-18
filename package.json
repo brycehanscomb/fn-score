@@ -9,7 +9,10 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "musicjson3": "^0.1.9",
+    "num2fraction": "^1.2.2",
     "opensheetmusicdisplay": "^0.2.1",
+    "pixi-piano-roll": "^1.2.3",
+    "prop-types": "^15.5.8",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-markdown-to-html": "^1.0.11",
