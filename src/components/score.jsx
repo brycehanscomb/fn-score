@@ -16,18 +16,18 @@ function getMusicXmlFromMusicJson(musicJson) {
     });
 }
 
-function getMusicJsonFromMusicXML(musicXml) {
-    return new Promise((resolve, reject) => {
-        music.musicJSON(musicXml, function(err, json) {
-            if (err) {
-                reject(err);
-                return;
-            }
-
-            resolve(json);
-        })
-    });
-}
+// function getMusicJsonFromMusicXML(musicXml) {
+//     return new Promise((resolve, reject) => {
+//         music.musicJSON(musicXml, function(err, json) {
+//             if (err) {
+//                 reject(err);
+//                 return;
+//             }
+//
+//             resolve(json);
+//         })
+//     });
+// }
 
 export default class Score extends React.Component {
 

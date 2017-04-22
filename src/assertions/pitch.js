@@ -1,4 +1,5 @@
 import TONES from '../constants/tones';
+import tonal from 'tonal';
 
 /**
  * @param {Tone} tone1
@@ -88,7 +89,12 @@ export function isNotOctave(octave, tone) {
  * @return {boolean}
  */
 export function isHigher(tone1, tone2) {
-    return TONES.indexOf(tone1) > TONES.indexOf(tone2);
+    // const a = tonal
+    // const b = TONES.indexOf(tone2);
+
+    // return a < b;
+
+    return tonal.semitones(tone1.toString(), tone2.toString()) > 0;
 }
 
 /**
@@ -99,7 +105,7 @@ export function isHigher(tone1, tone2) {
  * @return {boolean}
  */
 export function isLower(tone1, tone2) {
-    return TONES.indexOf(tone1) < TONES.indexOf(tone2);
+    return TONES.indexOf(tone1) > TONES.indexOf(tone2);
 }
 
 /**

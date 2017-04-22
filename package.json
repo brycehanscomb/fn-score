@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
+    "median": "0.0.2",
     "musicjson3": "^0.1.9",
     "num2fraction": "^1.2.2",
     "opensheetmusicdisplay": "^0.2.1",
@@ -16,7 +17,9 @@
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-markdown-to-html": "^1.0.11",
-    "satie": "0.0.13-alpha6"
+    "satie": "0.0.13-alpha6",
+    "tonal": "^0.69.5",
+    "tone": "^0.10.0"
   },
   "scripts": {
     "start": "react-scripts start",

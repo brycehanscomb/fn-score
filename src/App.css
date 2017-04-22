@@ -83,3 +83,52 @@ note-list:after {
   font-size: 1.1rem;
   content: ']';
 }
+
+.roll-comparison-container {
+  background: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 20px;
+  
+}
+
+.roll-comparison-container .name {
+  margin-top: 10px;
+}
+
+.roll-comparison {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roll-comparison .middle-section:before,
+.roll-comparison .middle-section:after {
+  content: '→';
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.roll-comparison .playable-piano-roll {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.roll-comparison .middle-section {
+  flex-grow: 1;
+  padding: 0 1em;
+  /*text-align: center;*/
+}
+
+.roll-comparison .middle-section pre code {
+  border: none;
+  padding: 0;
+}
+
+.roll-comparison[data-name]:before {
+  content: attr(data-name);
+  display: block;
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: bold;
+}

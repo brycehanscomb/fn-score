@@ -1,5 +1,4 @@
 import AbstractExtendable from './abstract-extendable';
-
 /**
  * @typedef {Object} Tone
  * @property {Object.<string, string>} note

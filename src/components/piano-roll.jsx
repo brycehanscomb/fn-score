@@ -6,7 +6,7 @@ export default class PianoRoll extends React.Component {
 
     componentDidMount() {
         this.roll = pixiPianoRoll({
-            width: 400,
+            width: 350,
             height: 200,
             noteColor: 0xdb000f,
             gridLineColor: 0xcdcdcd,
@@ -22,7 +22,28 @@ export default class PianoRoll extends React.Component {
         });
 
         this.refs.rootNode.appendChild(this.roll.view);
-        // this.roll.playback.play();
+
+        if (this.props.play === true) {
+            this.start();
+        }
+    }
+
+    start() {
+        this.roll.playback.seek('0:0:0');
+        this.roll.playback.play();
+    }
+
+    stop() {
+        this.roll.playback.pause();
+        this.roll.playback.seek('0:0:0');
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.play === true) {
+            this.start();
+        } else if (nextProps.play === false) {
+            this.stop();
+        }
     }
 
     render() {
@@ -37,5 +58,6 @@ PianoRoll.propTypes = {
     noteData: PropTypes.arrayOf(
         PropTypes.array.isRequired
     ).isRequired,
-    bars: PropTypes.number.isRequired
+    bars: PropTypes.number.isRequired,
+    play: PropTypes.bool.isRequired
 };

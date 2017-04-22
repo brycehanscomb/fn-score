@@ -23,6 +23,13 @@ export function createWithRandomTone(duration) {
     );
 }
 
+export function createFromDurationAsRest(duration) {
+    return Sound.composeFromToneAndDuration(
+        null,
+        duration
+    );
+}
+
 export function createWithRandomDuration(tone) {
     return Sound.composeFromToneAndDuration(
         tone,

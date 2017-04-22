@@ -7,7 +7,7 @@ import AbstractExtendable from './abstract-extendable';
  */
 class Sound extends AbstractExtendable {
     toString() {
-        return `${this.duration.toString()} note ${this.tone.toString()}`;
+        return `${this.duration.toString()} note ${(this.tone || 'rest').toString()}`;
     }
 
     /**
